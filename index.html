@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>銀包記 · 私隱政策</title>
+<meta name="description" content="銀包記（Silver Wallet）私隱政策：不收集任何個人資料，所有記帳資料只存於你的裝置。" />
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 48px 20px 80px;
+    font-family: "Microsoft JhengHei", "PingFang HK", "Noto Sans TC", system-ui, sans-serif;
+    background: #f4f5f9; color: #141726; line-height: 1.75;
+  }
+  main { max-width: 720px; margin: 0 auto; background: #fff; border-radius: 22px; padding: 40px 36px; box-shadow: 0 10px 30px rgba(27,35,64,.08); }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  .logo { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(160deg,#f5c451,#d6a430); display: grid; place-items: center; color: #1a1406; font-weight: 800; font-size: 24px; }
+  h1 { font-size: 26px; margin: 0; }
+  .sub { color: #98a0b3; font-size: 14px; margin: 4px 0 28px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  p, li { color: #3f465c; font-size: 15px; }
+  ul { padding-left: 22px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #ebedf5; vertical-align: top; }
+  th { color: #5c6379; font-weight: 600; background: #f8f9fd; }
+  code { background: #f1f3f9; padding: 2px 6px; border-radius: 6px; font-size: 13px; }
+  .note { background: #fff6e0; border-radius: 14px; padding: 14px 16px; color: #7a5300; font-size: 14px; }
+  a { color: #4338ca; }
+  footer { max-width: 720px; margin: 20px auto 0; text-align: center; color: #98a0b3; font-size: 13px; }
+  hr { border: 0; border-top: 1px solid #ebedf5; margin: 40px 0; }
+  @media (max-width: 560px) { main { padding: 28px 20px; border-radius: 16px; } body { padding: 20px 12px 60px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo">銀</div>
+    <h1>銀包記 · 私隱政策</h1>
+  </header>
+  <p class="sub">最後更新：2026年11月19日 · 適用於 Android 版 1.2.0</p>
+
+  <div class="note">一句話總結：銀包記唔收集你任何資料。所有記帳內容只存喺你部電話，唔會上傳。</div>
+
+  <h2>1. 我哋收集甚麼資料</h2>
+  <p><strong>冇。</strong>銀包記冇帳號、冇登入、冇雲端同步、冇分析 SDK、冇廣告 SDK、冇追蹤。</p>
+  <p>你輸入嘅所有資料（交易記錄、分類、錢包、預算、備註）只會儲存喺你部裝置嘅應用程式私人儲存空間（Android AsyncStorage）。本應用程式唔會將呢啲資料傳送去任何伺服器，開發者亦無法讀取。</p>
+
+  <h2>2. 裝置權限</h2>
+  <table>
+    <thead><tr><th>權限</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td><code>INTERNET</code></td><td>React Native 執行環境嘅標準權限。只有你主動喺「設定 → 匯率 → 更新」時，才會向 <code>open.er-api.com</code> 索取公開匯率；唔會傳送任何個人資料或記帳內容。</td></tr>
+      <tr><td><code>VIBRATE</code></td><td>按下數字鍵盤、儲存記錄時嘅輕微觸感回饋。</td></tr>
+    </tbody>
+  </table>
+  <p>本應用程式<strong>冇</strong>要求相機、麥克風、位置、聯絡人、相片或檔案存取權限。</p>
+
+  <h2>3. 備份</h2>
+  <p>Android 系統嘅自動備份功能（由 Google 提供）可能會將應用程式資料備份到你嘅 Google 帳戶。呢個備份由 Android 系統同 Google 管理，開發者無法存取。你可以喺「設定 → 系統 → 備份」關閉自動備份。</p>
+
+  <h2>4. 資料刪除</h2>
+  <ul>
+    <li>應用程式內「設定 → 重設全部資料」可以即時清除所有記錄。</li>
+    <li>解除安裝應用程式會一併刪除裝置上嘅所有資料。</li>
+  </ul>
+  <p>因為我哋冇收集資料，所以冇伺服器端資料需要刪除。</p>
+
+  <h2>5. 兒童</h2>
+  <p>本應用程式並非針對 13 歲以下兒童，亦唔會刻意收集兒童資料。</p>
+
+  <h2>6. 第三方服務</h2>
+  <p>本應用程式冇整合任何第三方分析、廣告、社交或追蹤服務。唯一嘅外部連線係公開匯率 API（open.er-api.com），只會傳送貨幣代號，唔涉及任何個人資料。</p>
+
+  <h2>7. 政策更新</h2>
+  <p>如果將來加入需要連線嘅功能（例如雲端同步），本政策會更新，並喺應用程式更新說明中註明。</p>
+
+  <h2>8. 聯絡我們</h2>
+  <p>如有任何私隱相關問題，請電郵：<a href="mailto:jizhang.app@example.com">jizhang.app@example.com</a></p>
+
+  <hr />
+
+  <h2>Privacy Policy (English)</h2>
+  <p><strong>We do not collect any data.</strong> Silver Wallet has no account, no login, no cloud sync, no analytics and no advertising SDK. Everything you enter is stored only in the app's private storage on your device and is never transmitted to any server.</p>
+  <p>Permissions: <code>INTERNET</code> (used only when you explicitly refresh exchange rates from <code>open.er-api.com</code>; no personal data is sent) and <code>VIBRATE</code> (haptic feedback).</p>
+  <p>Android's system auto-backup (provided by Google) may back up app data to your Google account; this is managed by Android/Google and not accessible to the developer.</p>
+  <p>You can delete all data in-app via Settings → Reset all data, or by uninstalling the app.</p>
+  <p>Contact: <a href="mailto:jizhang.app@example.com">jizhang.app@example.com</a></p>
+</main>
+<footer>銀包記 · 簡單記帳</footer>
+</body>
+</html>
